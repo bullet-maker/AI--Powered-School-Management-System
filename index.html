@@ -1,2 +1,204 @@
-do
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System Login - Ghana Theme</title>
+    <style>
+        :root {
+            --ghana-red: #CE1126;
+            --ghana-gold: #FCD116;
+            --ghana-green: #006B3F;
+            --text-light: #FFFFFF;
+            --text-dark: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, 
+                var(--ghana-red) 0%,
+                var(--ghana-red) 33%,
+                var(--ghana-gold) 33%,
+                var(--ghana-gold) 66%,
+                var(--ghana-green) 66%,
+                var(--ghana-green) 100%
+            );
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            color: var(--ghana-green);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--ghana-gold);
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .forgot-password {
+            color: var(--ghana-red);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--ghana-green);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #005132;
+        }
+
+        .user-types {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .user-types p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .user-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .user-type {
+            padding: 0.8rem;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        .user-type:hover {
+            background-color: var(--ghana-gold);
+            color: var(--text-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 1.5rem;
+            }
+
+            .user-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="header">
+            <h1>Welcome To Prince Ampofoh AI-Powered School Management</h1>
+            <p>Please sign in to continue</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="Enter your password">
+            </div>
+
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-button">Sign In</button>
+        </form>
+
+        <div class="user-types">
+            <p>Sign in as:</p>
+            <div class="user-grid">
+                <a href="#" class="user-type">👨‍🏫 Teacher</a>
+                <a href="#" class="user-type">👨‍🎓 Student</a>
+                <a href="#" class="user-type">👨‍💼 Admin</a>
+                <a href="#" class="user-type">👪 Parent</a>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
